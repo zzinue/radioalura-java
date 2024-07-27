@@ -5,6 +5,14 @@ public class Cancion extends Audio {
     private String cantante;
     private  String genero;
 
+    @Override
+    public int getClasificacion() {
+        if(getTotalDeMeGusta()>2000){
+            return 9;
+        }else {
+            return 2;
+        }
+    }
 
     public String getCantante() {
         return cantante;
